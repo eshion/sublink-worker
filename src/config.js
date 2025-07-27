@@ -59,6 +59,12 @@ export const UNIFIED_RULES = [
 		ip_rules: ['telegram']
 	},
 	{
+		name: 'Cloudflare',
+		outbound: t('outboundNames.Cloudflare'),
+		site_rules: [],
+		ip_rules: ['cloudflare']
+	},
+	{
 		name: 'Github',
 		outbound: t('outboundNames.Github'),
 		site_rules: ['github', 'gitlab'],
@@ -122,7 +128,7 @@ export const UNIFIED_RULES = [
 
 export const PREDEFINED_RULE_SETS = {
 	minimal: ['Location:CN', 'Private', 'Non-China'],
-	balanced: ['Location:CN', 'Private', 'Non-China','Github', 'Google', 'Youtube', 'AI Services', 'Telegram'],
+	balanced: ['Location:CN', 'Private', 'Non-China','Github', 'Google', 'Youtube', 'AI Services', 'Telegram', 'Cloudflare'],
 	comprehensive: UNIFIED_RULES.map(rule => rule.name)
   };
   
